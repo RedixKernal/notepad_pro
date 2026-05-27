@@ -123,6 +123,20 @@ export default function Home() {
             <p className="feature-desc">Access any file or command quickly through the popup command palette, keeping your hands on the keyboard.</p>
             <div className="feature-tag">Productivity</div>
           </div>
+
+          <div className="feature-card">
+            <div className="feature-icon feature-icon-blue">▶️</div>
+            <h3 className="feature-name">Run Code</h3>
+            <p className="feature-desc">Execute your programming scripts seamlessly. Right-click on your editor and select "Run Code" to instantly view the output in the built-in console.</p>
+            <div className="feature-tag">Execution Engine</div>
+          </div>
+
+          <div className="feature-card">
+            <div className="feature-icon feature-icon-orange">💾</div>
+            <h3 className="feature-name">Auto Save</h3>
+            <p className="feature-desc">Never lose your progress. Notepad_Pro automatically saves your work in the background as you type, giving you absolute peace of mind.</p>
+            <div className="feature-tag">Data Safety</div>
+          </div>
         </div>
       </section>
 
@@ -181,7 +195,7 @@ export default function Home() {
           </p>
 
           <div className="download-cards">
-            <a href="/Notepad_Pro-0.1.0.msi" download className="download-card primary" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <a href="/Notepad_Pro.msi" download className="download-card primary" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="recommended-badge">Recommended</div>
               <div className="download-card-icon">📦</div>
               <h3 className="download-card-name">MSI Installer</h3>
@@ -203,7 +217,7 @@ export default function Home() {
               </div>
             </a>
 
-            <a href="/Notepad_Pro-0.1.0.exe" download className="download-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <a href="/Notepad_Pro.exe" download className="download-card" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div className="download-card-icon">⚙️</div>
               <h3 className="download-card-name">EXE Installer</h3>
               <p className="download-card-desc">Self-extracting executable. Provides a guided setup wizard for user-level installations.</p>
