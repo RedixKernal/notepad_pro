@@ -21,9 +21,17 @@
 }
 
 @keyframes bgDrift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 body {
@@ -59,7 +67,7 @@ a:hover {
   background-color: var(--bg-dark);
   color: var(--text-light);
   padding: 16px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .container {
@@ -108,6 +116,8 @@ a:hover {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+  margin-bottom: 0px;
+
 }
 
 .reveal.active {
@@ -115,9 +125,17 @@ a:hover {
   transform: translateY(0);
 }
 
-.reveal.delay-1 { transition-delay: 0.1s; }
-.reveal.delay-2 { transition-delay: 0.2s; }
-.reveal.delay-3 { transition-delay: 0.3s; }
+.reveal.delay-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal.delay-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal.delay-3 {
+  transition-delay: 0.3s;
+}
 
 /* Hero Section */
 .hero {
@@ -125,7 +143,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 120px 0 80px 0; /* Add padding for fixed navbar */
+  padding: 120px 0 80px 0;
+  /* Add padding for fixed navbar */
   text-align: center;
   border-bottom: 1px solid var(--border-color);
   background: linear-gradient(-45deg, #ffffff, #fafafa, #f0fdf4, #ffffff);
@@ -166,7 +185,7 @@ a:hover {
   font-weight: 600;
   border: none;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-decoration: none !important;
 }
 
@@ -185,7 +204,7 @@ a:hover {
   border: 1px solid var(--border-color);
   cursor: pointer;
   text-decoration: none !important;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .btn-secondary:hover {
@@ -235,13 +254,13 @@ a:hover {
   padding: 32px;
   border-radius: var(--radius);
   border: 1px solid var(--border-color);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
 .feature-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .feature-item h3 {
@@ -277,7 +296,7 @@ a:hover {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .shortcuts-table th,
@@ -305,7 +324,7 @@ a:hover {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.9rem;
   color: var(--text-primary);
-  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
@@ -332,7 +351,117 @@ a:hover {
     flex-direction: column;
     align-items: center;
   }
+
   .navbar-links {
     display: none;
   }
+}
+
+/* OS Specific Buttons */
+.btn-os {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 28px;
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none !important;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: transparent;
+  transition: color 0.3s ease;
+  min-width: 260px;
+}
+
+.btn-os::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-os svg {
+  transition: fill 0.3s ease;
+}
+
+/* Windows */
+.btn-windows {
+  border: 2px solid #0078D6;
+  color: #0078D6 !important;
+}
+
+.btn-windows::before {
+  background-color: #0078D6;
+}
+
+.btn-windows:hover {
+  color: #ffffff !important;
+}
+
+.btn-windows:hover::before {
+  transform: scaleY(1);
+}
+
+/* macOS */
+.btn-macos {
+  border: 2px solid #333333;
+  color: #333333 !important;
+}
+
+.btn-macos::before {
+  background-color: #333333;
+}
+
+.btn-macos:hover {
+  color: #ffffff !important;
+}
+
+.btn-macos:hover::before {
+  transform: scaleY(1);
+}
+
+/* Linux */
+.btn-linux {
+  border: 2px solid #E95420;
+  color: #E95420 !important;
+}
+
+.btn-linux::before {
+  background-color: #E95420;
+}
+
+.btn-linux:hover {
+  color: #ffffff !important;
+}
+
+.btn-linux:hover::before {
+  transform: scaleY(1);
+}
+
+/* Download Chips */
+.download-chips {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  justify-content: center;
+}
+
+.chip {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
 }
