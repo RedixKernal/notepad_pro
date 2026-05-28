@@ -92,32 +92,60 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
       <section id="features" className="content-section">
         <div className="container">
-          <h2 className="reveal">About Notepad_Pro</h2>
+          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <h2 className="reveal" style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Supercharge Your Coding</h2>
+            <p className="reveal delay-1" style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>
+              Experience lightning-fast performance, robust tooling, and an elegant interface designed for developers.
+            </p>
+          </div>
+          
           <div className="features-grid">
             <div className="feature-item reveal delay-1">
+              <div className="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
               <h3>Run 50+ Languages</h3>
               <p>Compile and execute code seamlessly with support for over 50 programming languages. View output instantly in the built-in console.</p>
             </div>
+            
             <div className="feature-item reveal delay-2">
+              <div className="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
               <h3>Multi-Tab Editing</h3>
               <p>Work on multiple files simultaneously with our efficient tabbed interface. Unsaved changes are clearly marked.</p>
             </div>
+            
             <div className="feature-item reveal delay-3">
+              <div className="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+              </div>
               <h3>File Explorer Sidebar</h3>
               <p>Navigate your projects with a built-in toggleable sidebar. Create, rename, or delete files directly from the app.</p>
             </div>
+            
             <div className="feature-item reveal delay-1">
+              <div className="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              </div>
               <h3>Powerful Search</h3>
               <p>Find text within the current file or search globally across your entire project directory with case-sensitivity options.</p>
             </div>
+            
             <div className="feature-item reveal delay-2">
+              <div className="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+              </div>
               <h3>Auto Save</h3>
               <p>Never lose your progress. Notepad_Pro automatically saves your work in the background as you type.</p>
             </div>
+            
             <div className="feature-item reveal delay-3">
+              <div className="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+              </div>
               <h3>Command Palette</h3>
               <p>Access any file or command quickly through the popup command palette, keeping your hands on the keyboard.</p>
             </div>
@@ -128,45 +156,86 @@ export default function Home() {
       {/* Shortcuts Section */}
       <section id="shortcuts" className="shortcuts-section">
         <div className="container">
-          <h2 className="reveal">Keyboard Shortcuts</h2>
-          <table className="shortcuts-table reveal delay-1">
-            <thead>
-              <tr>
-                <th>Action</th>
-                <th>Shortcut</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Save File</td>
-                <td><kbd>Ctrl</kbd> + <kbd>S</kbd></td>
-              </tr>
-              <tr>
-                <td>Run Code</td>
-                <td><kbd>Ctrl</kbd> + <kbd>R</kbd></td>
-              </tr>
-              <tr>
-                <td>Open Folder</td>
-                <td><kbd>Ctrl</kbd> + <kbd>O</kbd></td>
-              </tr>
-              <tr>
-                <td>Find in File</td>
-                <td><kbd>Ctrl</kbd> + <kbd>F</kbd></td>
-              </tr>
-              <tr>
-                <td>Toggle Sidebar</td>
-                <td><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
-              </tr>
-              <tr>
-                <td>Toggle Theme</td>
-                <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd></td>
-              </tr>
-              <tr>
-                <td>Zoom In / Out</td>
-                <td><kbd>Ctrl</kbd> + <kbd>+</kbd> / <kbd>-</kbd></td>
-              </tr>
-            </tbody>
-          </table>
+          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <h2 className="reveal" style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Master Your Workflow</h2>
+            <p className="reveal delay-1" style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>
+              Keep your hands on the keyboard. Use these powerful shortcuts to navigate and edit at the speed of thought.
+            </p>
+          </div>
+          
+          <div className="shortcuts-grid reveal delay-2">
+            
+            <div className="shortcut-card">
+              <div className="shortcut-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg>
+                <span>Save File</span>
+              </div>
+              <div className="shortcut-keys">
+                <kbd>Ctrl</kbd><span>+</span><kbd>S</kbd>
+              </div>
+            </div>
+
+            <div className="shortcut-card">
+              <div className="shortcut-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Run Code</span>
+              </div>
+              <div className="shortcut-keys">
+                <kbd>Ctrl</kbd><span>+</span><kbd>R</kbd>
+              </div>
+            </div>
+
+            <div className="shortcut-card">
+              <div className="shortcut-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                <span>Open Folder</span>
+              </div>
+              <div className="shortcut-keys">
+                <kbd>Ctrl</kbd><span>+</span><kbd>O</kbd>
+              </div>
+            </div>
+
+            <div className="shortcut-card">
+              <div className="shortcut-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>Find in File</span>
+              </div>
+              <div className="shortcut-keys">
+                <kbd>Ctrl</kbd><span>+</span><kbd>F</kbd>
+              </div>
+            </div>
+
+            <div className="shortcut-card">
+              <div className="shortcut-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+                <span>Toggle Sidebar</span>
+              </div>
+              <div className="shortcut-keys">
+                <kbd>Ctrl</kbd><span>+</span><kbd>B</kbd>
+              </div>
+            </div>
+
+            <div className="shortcut-card">
+              <div className="shortcut-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <span>Toggle Theme</span>
+              </div>
+              <div className="shortcut-keys">
+                <kbd>Ctrl</kbd><span>+</span><kbd>Shift</kbd><span>+</span><kbd>T</kbd>
+              </div>
+            </div>
+
+            <div className="shortcut-card">
+              <div className="shortcut-info">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Zoom In / Out</span>
+              </div>
+              <div className="shortcut-keys">
+                <kbd>Ctrl</kbd><span>+</span><kbd>+</kbd><span>/</span><kbd>-</kbd>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
