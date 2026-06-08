@@ -6,25 +6,46 @@ import { useEffect } from "react";
 
 const downloads = [
   {
+    name: "Notepad_Pro-2.0.0.msi",
+    link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v2.0.0/Notepad_Pro-2.0.0.msi",
+    version: "v2.0.0",
+    architecture: "Windows (64-bit)",
+    date: "Latest"
+  },
+  {
+    name: "Notepad_Pro-2.0.0.dmg",
+    link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v2.0.0/Notepad_Pro-2.0.0.dmg",
+    version: "v2.0.0",
+    architecture: "macOS",
+    date: "Latest"
+  },
+  {
+    name: "Notepad-pro_2.0.0-1_amd64.deb",
+    link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v2.0.0/notepad-pro_2.0.0-1_amd64.deb",
+    version: "v2.0.0",
+    architecture: "Linux (Debian/Ubuntu)",
+    date: "Latest"
+  },
+  {
     name: "Notepad_Pro-1.1.0.msi",
     link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v1.1.0/Notepad_Pro-1.1.0.msi",
     version: "v1.1.0",
     architecture: "Windows (64-bit)",
-    date: "Latest"
+    date: "Previous"
   },
   {
     name: "Notepad_Pro-1.1.0.dmg",
     link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v1.1.0/Notepad_Pro-1.1.0.dmg",
     version: "v1.1.0",
     architecture: "macOS",
-    date: "Latest"
+    date: "Previous"
   },
   {
     name: "Notepad-pro_1.1.0-1_amd64.deb",
     link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v1.1.0/notepad-pro_1.1.0-1_amd64.deb",
     version: "v1.1.0",
     architecture: "Linux (Debian/Ubuntu)",
-    date: "Latest"
+    date: "Previous"
   },
   {
     name: "Notepad_Pro-1.0.0.msi",
