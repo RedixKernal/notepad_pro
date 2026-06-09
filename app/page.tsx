@@ -36,9 +36,9 @@ export default function Home() {
             Notepad_Pro
           </Link>
           <ul className="navbar-links">
-            <li><Link href="#features">Features</Link></li>
-            <li><Link href="#shortcuts">Shortcuts</Link></li>
             <li><Link href="/downloads">Download</Link></li>
+            <li><Link href="/privacy-policy">Privacy & Terms</Link></li>
+           
           </ul>
         </div>
       </nav>
@@ -257,9 +257,25 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="footer reveal">
-        <div className="container">
-          <p>&copy; {new Date().getFullYear()} Redix Systems. Designed and Developed by Redix Systems.</p>
+      <footer className="footer reveal" style={{ background: 'var(--bg-dark)', padding: '80px 5% 40px', color: '#fff', textAlign: 'center' }}>
+        <div className="container" style={{ maxWidth: '1400px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.4rem', fontWeight: '700' }}>
+              <Image src="/app_icon.png" alt="Notepad_Pro Icon" width={32} height={32} style={{ borderRadius: '6px' }} />
+              Notepad_Pro
+            </div>
+            <p style={{ color: '#a0aec0', maxWidth: '480px', margin: '0 auto', lineHeight: '1.7', fontSize: '1.1rem' }}>
+              A free, open-source, lightweight notepad designed for maximum productivity and seamless execution.
+            </p>
+            <div style={{ display: 'flex', gap: '32px', marginTop: '24px' }}>
+              
+              <Link href="/" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s', fontWeight: '500' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}>Home</Link>
+              <Link href="/downloads" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s', fontWeight: '500' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}>Download</Link>
+              <Link href="/privacy-policy" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s', fontWeight: '500' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}>Privacy & Terms</Link>
+            </div>
+            <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.1)', margin: '40px 0 20px' }}></div>
+            <p style={{ color: '#718096', fontSize: '0.95rem' }}>&copy; {new Date().getFullYear()} Redix Systems. Designed and Developed by Redix Systems.</p>
+          </div>
         </div>
       </footer>
     </>
