@@ -27,8 +27,22 @@ export default function PrivacyPolicy() {
     const revealElements = document.querySelectorAll(".reveal-section");
     revealElements.forEach((el) => observer.observe(el));
 
+    const animationObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const animatedElements = document.querySelectorAll(".reveal");
+    animatedElements.forEach((el) => animationObserver.observe(el));
+
     return () => {
       revealElements.forEach((el) => observer.unobserve(el));
+      animatedElements.forEach((el) => animationObserver.unobserve(el));
     };
   }, []);
 
@@ -42,21 +56,8 @@ export default function PrivacyPolicy() {
 
   return (
     <>
-      {/* Navbar */}
-      <nav className="navbar" style={{ background: 'var(--bg-dark)' }}>
-        <div className="container" style={{ maxWidth: '100%', padding: '0 5%' }}>
-          <Link href="/" className="navbar-logo">
-            <Image src="/app_icon.png" alt="Notepad_Pro Icon" width={28} height={28} className="logo-icon-img" />
-            Notepad_Pro
-          </Link>
-          <ul className="navbar-links">
-           <li><Link href="/privacy-policy">Privacy & Terms</Link></li>
-            <li><Link href="/downloads">Download</Link></li>
-          </ul>
-        </div>
-      </nav>
 
-      {/* Hero Header */}
+
       <section style={{ 
         padding: '160px 5% 80px', 
         background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)', 
@@ -265,28 +266,7 @@ export default function PrivacyPolicy() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer" style={{ background: 'var(--bg-dark)', padding: '80px 5% 40px', color: '#fff', textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '1400px' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.4rem', fontWeight: '700' }}>
-              <Image src="/app_icon.png" alt="Notepad_Pro Icon" width={32} height={32} style={{ borderRadius: '6px' }} />
-              Notepad_Pro
-            </div>
-            <p style={{ color: '#a0aec0', maxWidth: '480px', margin: '0 auto', lineHeight: '1.7', fontSize: '1.1rem' }}>
-              A free, open-source, lightweight notepad designed for maximum productivity and seamless execution.
-            </p>
-            <div style={{ display: 'flex', gap: '32px', marginTop: '24px' }}>
-              <Link href="/#features" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s', fontWeight: '500' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}>Features</Link>
-              <Link href="/#shortcuts" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s', fontWeight: '500' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}>Shortcuts</Link>
-              <Link href="/downloads" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s', fontWeight: '500' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}>Download</Link>
-              <Link href="/privacy-policy" style={{ color: '#fff', textDecoration: 'none', fontWeight: '600' }}>Privacy & Terms</Link>
-            </div>
-            <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.1)', margin: '40px 0 20px' }}></div>
-            <p style={{ color: '#718096', fontSize: '0.95rem' }}>&copy; {new Date().getFullYear()} Redix Systems. Designed and Developed by Redix Systems.</p>
-          </div>
-        </div>
-      </footer>
+
       
       {/* Basic responsive styles for sidebar via global style insertion */}
       <style dangerouslySetInnerHTML={{__html: `

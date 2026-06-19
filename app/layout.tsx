@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   description: "Your Modern Code & Notes Editor. Experience seamless multi-tab editing, dark mode, and a built-in file explorer.",
 };
 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -14,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -6,26 +6,26 @@ import { useEffect } from "react";
 
 const downloads = [
   {
-    name: "Notepad_Pro-2.0.0.msi",
-    link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v2.0.0/Notepad_Pro-2.0.0.msi",
+    name: "Notepad_Pro-2.0.0.msix",
+    link: "https://get.microsoft.com/installer/download/9P3BZ03WV8WG?hl=en-us&gl=us&ocid=pdpshare&referrer=storeforweb",
     version: "v2.0.0",
     architecture: "Windows (64-bit)",
     date: "Latest"
   },
-  {
-    name: "Notepad_Pro-2.0.0.dmg",
-    link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v2.0.0/Notepad_Pro-2.0.0.dmg",
-    version: "v2.0.0",
-    architecture: "macOS",
-    date: "Latest"
-  },
-  {
-    name: "Notepad-pro_2.0.0-1_amd64.deb",
-    link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v2.0.0/notepad-pro_2.0.0-1_amd64.deb",
-    version: "v2.0.0",
-    architecture: "Linux (Debian/Ubuntu)",
-    date: "Latest"
-  },
+  // {
+  //   name: "Notepad_Pro-2.0.0.dmg",
+  //   link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v2.0.0/Notepad_Pro-2.0.0.dmg",
+  //   version: "v2.0.0",
+  //   architecture: "macOS",
+  //   date: "Latest"
+  // },
+  // {
+  //   name: "Notepad-pro_2.0.0-1_amd64.deb",
+  //   link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v2.0.0/notepad-pro_2.0.0-1_amd64.deb",
+  //   version: "v2.0.0",
+  //   architecture: "Linux (Debian/Ubuntu)",
+  //   date: "Latest"
+  // },
   {
     name: "Notepad_Pro-1.1.0.msi",
     link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v1.1.0/Notepad_Pro-1.1.0.msi",
@@ -38,14 +38,14 @@ const downloads = [
     link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v1.1.0/Notepad_Pro-1.1.0.dmg",
     version: "v1.1.0",
     architecture: "macOS",
-    date: "Previous"
+    date: "Latest"
   },
   {
     name: "Notepad-pro_1.1.0-1_amd64.deb",
     link: "https://github.com/RedixKernal/notepad_pro_app/releases/download/v1.1.0/notepad-pro_1.1.0-1_amd64.deb",
     version: "v1.1.0",
     architecture: "Linux (Debian/Ubuntu)",
-    date: "Previous"
+   date: "Latest"
   },
   {
     name: "Notepad_Pro-1.0.0.msi",
@@ -94,19 +94,6 @@ export default function Downloads() {
 
   return (
     <>
-      {/* Navbar */}
-      <nav className="navbar">
-        <div className="container">
-          <Link href="/" className="navbar-logo">
-            <Image src="/app_icon.png" alt="Notepad_Pro Icon" width={28} height={28} className="logo-icon-img" />
-            Notepad_Pro
-          </Link>
-          <ul className="navbar-links">
-           <li><Link href="/privacy-policy">Privacy & Terms</Link></li>
-            <li><Link href="/downloads">Download</Link></li>
-          </ul>
-        </div>
-      </nav>
 
       {/* Downloads Section */}
       <section className="shortcuts-section" style={{ minHeight: 'calc(100vh - 100px)', paddingTop: '120px' }}>
@@ -196,6 +183,8 @@ export default function Downloads() {
                     <li><span className="rn-tag rn-tag-feature" style={{ marginRight: '8px', verticalAlign: 'middle', display: 'inline-block' }}>New Feature</span> <strong>AI Assistant Enabled:</strong> Empower your research and development with our new AI integration. You can now ask anything about the current active tab's content, and the AI will use it as context to provide intelligent responses.</li>
                     <li><span className="rn-tag rn-tag-improve" style={{ marginRight: '8px', verticalAlign: 'middle', display: 'inline-block' }}>Improvement</span> Fixed the auto-scroll flickering issue from top to bottom.</li>
                     <li><span className="rn-tag rn-tag-fix" style={{ marginRight: '8px', verticalAlign: 'middle', display: 'inline-block' }}>Fix</span> Resolved auto-close bugs and improved dialog placement across the application.</li>
+                    <li><span className="rn-tag rn-tag-fix" style={{ marginRight: '8px', verticalAlign: 'middle', display: 'inline-block' }}>Fix</span> Eliminated zombie processes and hanging JVMs by ensuring all child processes are forcefully terminated upon closing the app.</li>
+                    <li><span className="rn-tag rn-tag-fix" style={{ marginRight: '8px', verticalAlign: 'middle', display: 'inline-block' }}>Fix</span> Fixed an issue where saved window dimensions (width and height) were ignored on startup, ensuring your workspace size is accurately restored.</li>
                   </ol>
                 </div>
               </div>
@@ -211,6 +200,7 @@ export default function Downloads() {
                   <ol>
                     <li><span className="rn-tag rn-tag-improve" style={{ marginRight: '8px', verticalAlign: 'middle', display: 'inline-block' }}>Improvement</span> Enhanced AI context processing speed specifically for Windows environments.</li>
                     <li><span className="rn-tag rn-tag-fix" style={{ marginRight: '8px', verticalAlign: 'middle', display: 'inline-block' }}>Fix</span> Addressed minor UI rendering glitches on Windows 11.</li>
+                    <li><span className="rn-tag rn-tag-fix" style={{ marginRight: '8px', verticalAlign: 'middle', display: 'inline-block' }}>Fix</span> Resolved permission denied errors by ensuring AI audit logs are correctly saved to the user's local application data directory (MSIX Sandboxing Fix).</li>
                   </ol>
                 </div>
               </div>
@@ -251,28 +241,7 @@ export default function Downloads() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="footer reveal" style={{ background: 'var(--bg-dark)', padding: '80px 5% 40px', color: '#fff', textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '1400px' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', fontSize: '1.4rem', fontWeight: '700' }}>
-              <Image src="/app_icon.png" alt="Notepad_Pro Icon" width={32} height={32} style={{ borderRadius: '6px' }} />
-              Notepad_Pro
-            </div>
-            <p style={{ color: '#a0aec0', maxWidth: '480px', margin: '0 auto', lineHeight: '1.7', fontSize: '1.1rem' }}>
-              A free, open-source, lightweight notepad designed for maximum productivity and seamless execution.
-            </p>
-            <div style={{ display: 'flex', gap: '32px', marginTop: '24px' }}>
-            
-              <Link href="/" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s', fontWeight: '500' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}>Home</Link>
-              <Link href="/downloads" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s', fontWeight: '500' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}>Download</Link>
-              <Link href="/privacy-policy" style={{ color: '#cbd5e1', textDecoration: 'none', transition: 'color 0.2s', fontWeight: '500' }} onMouseEnter={(e) => e.currentTarget.style.color = '#fff'} onMouseLeave={(e) => e.currentTarget.style.color = '#cbd5e1'}>Privacy & Terms</Link>
-            </div>
-            <div style={{ width: '100%', height: '1px', background: 'rgba(255,255,255,0.1)', margin: '40px 0 20px' }}></div>
-            <p style={{ color: '#718096', fontSize: '0.95rem' }}>&copy; {new Date().getFullYear()} Redix Systems. Designed and Developed by Redix Systems.</p>
-          </div>
-        </div>
-      </footer>
+
     </>
   );
 }
